@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#1d3af5</color>
+    <color name="colorPrimaryDark">#637af9</color>
     <color name="colorAccent">#FF4081</color>
 
 
@@ -14,6 +14,7 @@
     <color name="blackTR20">#33000000</color>
     <color name="white">#ffffff</color>
     <color name="whiteTR50">#33ffffff</color>
+    <color name="whiteTR100">#00ffffff</color>
     <color name="orange">#fa9b3c</color>
     <color name="blue">#0000FF</color>
 

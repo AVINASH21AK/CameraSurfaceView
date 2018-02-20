@@ -27,7 +27,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
 
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     //butterknife
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //Crop image
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+
+    //recycleview
+    compile 'com.android.support:recyclerview-v7:26.0.0'
 }

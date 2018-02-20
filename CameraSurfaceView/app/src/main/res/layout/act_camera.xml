@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -25,6 +26,37 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/rlFinal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCameraCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/ivViewPgrImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/surface_cat"
+                    android:layout_gravity="center"/>
+
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivFinalMerge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+            </FrameLayout>
+
 
         </FrameLayout>
 
@@ -58,15 +90,21 @@
                 android:src="@drawable/ic_camera_24dp"
                 android:layout_alignParentRight="true"/>
 
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ivCropImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="@dimen/size_10"
+                android:background="@color/blackTR50"
+
+                android:src="@drawable/ic_crop_24dp"
+                android:layout_alignParentLeft="true"/>
+
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/ivProgressBar"
-            android:layout_width="@dimen/size_50"
-            android:layout_height="@dimen/size_50"
-            android:layout_centerInParent="true"
-            android:background="@drawable/progressbar"/>
-        <!--android:background="@drawable/progressbar"-->
+
 
     </RelativeLayout>
 </RelativeLayout>

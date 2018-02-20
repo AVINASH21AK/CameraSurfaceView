@@ -13,8 +13,14 @@
     <!--Camera-->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera" />
+
+    <!--Camera Features-->
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <!--Earphone Buttons-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
 
     <application
         android:name=".common.App"
@@ -28,10 +34,12 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true">
 
-        <activity android:name=".activity.ActDashboard">
+        <activity
+            android:name=".activity.ActDashboard"
+            android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,6 +47,28 @@
         <activity
             android:name=".activity.ActCameraSurfaceView"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.ActCrop"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.ActGame"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.ActHidePic"
+            android:screenOrientation="portrait"/>
+
+
+        <!--Earphone Button-->
+       <!-- <intent-filter android:priority="1000">
+            <action android:name="android.intent.action.MEDIA_BUTTON" />
+        </intent-filter>-->
+
+        <!--Crop Image Activity-->
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/> <!-- optional (needed if default theme has no action bar) -->
         
     </application>
 

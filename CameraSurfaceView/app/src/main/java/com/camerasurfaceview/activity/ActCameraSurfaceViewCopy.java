@@ -76,7 +76,7 @@ public class ActCameraSurfaceViewCopy extends Activity implements SurfaceHolder.
     * overlay - https://stackoverflow.com/questions/21877525/save-overlay-image-camerapreview
     * overlay2 - https://stackoverflow.com/questions/25721628/android-drawing-multiple-different-size-bitmaps-to-same-size-canvas
     * viewToBitmap - https://stackoverflow.com/questions/10674570/how-to-convert-linearlayout-to-image
-    *
+    *https://stackoverflow.com/questions/2801116/converting-a-view-to-bitmap-without-displaying-it-in-android
     * */
 
 

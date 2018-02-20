@@ -5,15 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.camerasurfaceview.activity.ActDashboard">
+    tools:context="com.camerasurfaceview.activity.ActDashboard"
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/btnCamera"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        android:text="Camera with Overlap"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Camera with Overlap"/>
+
+        <Button
+            android:visibility="visible"
+            android:id="@+id/btnGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size_20"
+            android:text="Game"/>
+
+        <Button
+            android:id="@+id/btnHidePics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size_20"
+            android:text="Hide-Pics"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
