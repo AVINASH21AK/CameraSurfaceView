@@ -58,7 +58,7 @@
     <dimen name="size_450">450dp</dimen>
 
 
-
+    <dimen name="edtSize16">16dp</dimen>
 
 
 </resources>

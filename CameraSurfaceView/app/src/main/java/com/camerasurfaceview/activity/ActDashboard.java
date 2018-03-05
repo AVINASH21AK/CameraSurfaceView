@@ -1,16 +1,15 @@
 package com.camerasurfaceview.activity;
 
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
 import com.camerasurfaceview.R;
 import com.camerasurfaceview.common.App;
-import com.camerasurfaceview.common.HardButtonReceiver;
+import com.camerasurfaceview.common.CustomWebView;
+import com.camerasurfaceview.common.DatabaseHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,16 +17,17 @@ import butterknife.ButterKnife;
 public class ActDashboard extends AppCompatActivity {  //implements HardButtonReceiver.HardButtonListener
 
     String TAG = "ActDashboard";
+    DatabaseHelper dbHelper;
 
-    @BindView(R.id.btnCamera)
-    Button btnCamera;
+    @BindView(R.id.btnPMS) Button btnPMS;
+    @BindView(R.id.btnCamera) Button btnCamera;
+    @BindView(R.id.btnGame) Button btnGame;
+    @BindView(R.id.btnHidePics) Button btnHidePics;
+    @BindView(R.id.btnCheckForeground) Button btnCheckForeground;
+    @BindView(R.id.btnTransition) Button btnTransition;
+    @BindView(R.id.btnYoutube) Button btnYoutube;
 
-    @BindView(R.id.btnGame)
-    Button btnGame;
-
-    @BindView(R.id.btnHidePics)
-    Button btnHidePics;
-
+    CustomWebView cts;
     //private HardButtonReceiver mButtonReceiver;
 
     @Override
@@ -48,14 +48,20 @@ public class ActDashboard extends AppCompatActivity {  //implements HardButtonRe
         *  - https://stackoverflow.com/questions/39410268/how-to-listen-to-action-down-key-pressed-event-in-android-onmediabuttonevent/39413753#39413753
         * */
 
+
+        App.startAlarmServices(ActDashboard.this);
+
         initialize();
         clickEvent();
+
+        /*Intent i1 = new Intent(ActDashboard.this, ActYouTube.class);
+        startActivity(i1);*/
     }
 
 
     public void initialize(){
         try{
-
+            dbHelper = new DatabaseHelper(this);
 
           /*  mButtonReceiver = new HardButtonReceiver(this);
             IntentFilter i1 = new IntentFilter(Intent.ACTION_MEDIA_BUTTON);
@@ -110,6 +116,14 @@ public class ActDashboard extends AppCompatActivity {  //implements HardButtonRe
         try{
 
 
+            btnPMS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    cts = new CustomWebView(ActDashboard.this, 0xff007392);
+                    cts.launchUrl("http://eliteinfoworld.net/pms/login.php");
+                }
+            });
+
             btnCamera.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -143,6 +157,35 @@ public class ActDashboard extends AppCompatActivity {  //implements HardButtonRe
                     startActivity(i1);
                 }
             });
+
+            btnCheckForeground.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i1 = new Intent(ActDashboard.this, ActCheckForegournd.class);
+                    startActivity(i1);
+                }
+            });
+
+            btnTransition.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i1 = new Intent(ActDashboard.this, ActExpandTextview.class);
+                    startActivity(i1);
+                }
+            });
+
+            btnYoutube.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    dbHelper.DropAllTable();
+
+                    Intent i1 = new Intent(ActDashboard.this, ActYouTube.class);
+                    startActivity(i1);
+                }
+            });
+
+
         }catch (Exception e){
             e.printStackTrace();
         }

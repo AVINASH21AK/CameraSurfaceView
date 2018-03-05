@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/llRootLay"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/size_20">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginRight="@dimen/size_20"
+
+        card_view:cardBackgroundColor="@color/blackTR20"
+        card_view:cardCornerRadius="@dimen/size_5"
+        card_view:cardElevation="@dimen/size_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivVideoImg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+
+                fresco:placeholderImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/ic_placeholder_48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:padding="@dimen/size_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16"
+                    android:textAlignment="center"/>
+
+                <ImageView
+                    android:id="@+id/ivDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/sel_green"
+                    android:padding="@dimen/size_10"
+
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_arrow_24dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

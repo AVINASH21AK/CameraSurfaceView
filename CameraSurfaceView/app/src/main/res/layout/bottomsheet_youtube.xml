@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llMainLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tvVideoType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"
+
+                android:drawableLeft="@drawable/ic_video_18dp"
+                android:layout_marginLeft="@dimen/size_10"
+
+                android:textAlignment="center"
+                android:text="Type"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvVideoQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="@dimen/size_15"
+                android:paddingBottom="@dimen/size_15"
+                android:background="@color/whiteShadow"
+
+                android:drawableLeft="@drawable/ic_quality_400_18dp"
+                android:paddingLeft="@dimen/size_20"
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"
+
+                android:textAlignment="center"
+                android:text="Quality"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvVideoDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"
+
+                android:drawableLeft="@drawable/ic_time_18dp"
+                android:paddingLeft="@dimen/size_20"
+
+                android:textAlignment="center"
+                android:text="Duration"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/blackTR50"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerBottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

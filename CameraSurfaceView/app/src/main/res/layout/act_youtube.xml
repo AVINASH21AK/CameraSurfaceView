@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+    <LinearLayout
+        android:id="@+id/llRootLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/size_15"
+            android:background="@color/blackTR20">
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+
+                android:padding="@dimen/size_5"
+                android:tint="@color/white"
+                android:src="@drawable/ic_home_24dp" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+
+                android:hint="@string/hintSearch"
+                android:inputType="text"
+
+                android:maxLines="1"
+                android:singleLine="true"
+
+                android:textCursorDrawable="@drawable/xml_cursor_clr"
+                android:textSize="@dimen/edtSize16"
+
+
+                app:met_baseColor="@color/white"
+                app:met_floatingLabel="normal"
+                app:met_hideUnderline="false"
+                app:met_primaryColor="@color/red"
+                app:met_textColorHint="@color/blackTR50"
+                app:met_underlineColor="@color/blackTR50"/>
+
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+
+                android:padding="@dimen/size_5"
+                android:tint="@color/white"
+                android:src="@drawable/ic_search_24dp" />
+
+        </LinearLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/materialRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:progress_colors="@array/progress_bar_color">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </com.cjj.MaterialRefreshLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

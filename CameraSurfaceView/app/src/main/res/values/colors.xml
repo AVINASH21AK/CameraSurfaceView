@@ -6,16 +6,38 @@
 
 
     <color name="green">#71b8c6</color>
+    <color name="greenDark">#456f78</color>
     <color name="red">#c02942</color>
     <color name="redDark">#9e0921</color>
     <color name="violet">#9a00ff</color>
-    <color name="black">#000000</color>
+    <color name="black">#333333</color>
+    <color name="grey">#78909C</color>
     <color name="blackTR50">#80000000</color>
     <color name="blackTR20">#33000000</color>
     <color name="white">#ffffff</color>
+    <color name="whiteShadow">#e5e5e5</color>
     <color name="whiteTR50">#33ffffff</color>
     <color name="whiteTR100">#00ffffff</color>
     <color name="orange">#fa9b3c</color>
     <color name="blue">#0000FF</color>
+
+
+    <color name="bluegray">#607D8B</color>
+    <color name="bluegray_dark">#546E7A</color>
+
+    <color name="cyan">#3498db</color>
+    <color name="cyan_dark">#2980b9</color>
+
+    <color name="orange_dark">#c0392b</color>
+
+    <color name="green_dark">#27ae60</color>
+
+    <color name="brown">#795548</color>
+    <color name="brown_dark">#5D4037</color>
+    <color name="blue_dark">#bd081c</color>
+    <!-- Component colors -->
+    <color name="light_gray">#EFEFEF</color>
+    <color name="middle_gray">#E0E0E0</color>
+    <color name="gray">#616161</color>
 
 </resources>

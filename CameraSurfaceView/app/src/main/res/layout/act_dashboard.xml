@@ -16,10 +16,18 @@
         android:gravity="center_horizontal">
 
         <Button
+            android:id="@+id/btnPMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="PMS - EliteInfoWorld"/>
+
+        <Button
             android:id="@+id/btnCamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_marginTop="@dimen/size_20"
             android:text="Camera with Overlap"/>
 
         <Button
@@ -38,6 +46,30 @@
 
             android:layout_marginTop="@dimen/size_20"
             android:text="Hide-Pics"/>
+
+        <Button
+            android:id="@+id/btnCheckForeground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size_20"
+            android:text="Check App is ForeGround"/>
+
+        <Button
+            android:id="@+id/btnTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size_20"
+            android:text="Expand Textview"/>
+
+        <Button
+            android:id="@+id/btnYoutube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size_20"
+            android:text="YouTube"/>
 
     </LinearLayout>
 

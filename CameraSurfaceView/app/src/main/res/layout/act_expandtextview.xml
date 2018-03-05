@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.camerasurfaceview.activity.ActDashboard"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:expansion_headerIndicator="@id/headerIndicator"
+                app:expansion_layout="@id/expansionLayout"
+                app:expansion_toggleOnClick="true">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                <!-- HEADER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="com.github.florent37.expansionpanel.ExpansionHeader"/>
+
+                <!-- HEADER INDICATOR -->
+                <android.support.v7.widget.AppCompatImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/headerIndicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                </LinearLayout>
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansionLayout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <!-- CONTENT -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="com.github.florent37.expansionpanel.ExpansionLayout"/>
+
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
